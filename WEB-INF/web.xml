@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+
+   <servlet>
+        <servlet-name>UserController</servlet-name>
+        <servlet-class>controller.UserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserController</servlet-name>
+        <url-pattern>/UserController</url-pattern>
+    </servlet-mapping>
+    
+       <servlet>
+        <servlet-name>StudyController</servlet-name>
+        <servlet-class>controller.StudyController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>StudyController</servlet-name>
+        <url-pattern>/StudyController</url-pattern>
+    </servlet-mapping>
+
+       <servlet>
+        <servlet-name>RCController</servlet-name>
+        <servlet-class>controller.RCController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RCController</servlet-name>
+        <url-pattern>/RCController</url-pattern>
+    </servlet-mapping>
+
+
+   <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>welcome.HomeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/HomeController</url-pattern>
+    </servlet-mapping>
+    
+    <welcome-file-list>
+        <welcome-file>HomeController</welcome-file>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+</web-app>
+
+
